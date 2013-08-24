@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Django-uploadcleaner by msama</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/msama/django-uploadcleaner">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/msama/django-uploadcleaner/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/msama/django-uploadcleaner/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Django-uploadcleaner</h1>
+          <p>Clean upload media files no longer linked from the database.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/msama">msama</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1></h1>
+
+<h1>
+<a name="django-uploadcleaner" class="anchor" href="#django-uploadcleaner"><span class="octicon octicon-link"></span></a>django-uploadcleaner</h1>
+
+<p>clean_obsolete_uploads lists all the files contained in the
+database and all the files in the media folders and 
+DELETES all those files which are no longer in the database.</p>
+
+<p>WARNING all the uploaded file not contained in the database
+will be removed!</p>
+
+<p>Since django 1.3 deleting a FileField does not delete the
+linked file. Such files remain in the filesystem and need to
+be deleted manually. </p>
+
+<p>Files are loaded from a settings.MEDIA_FOLDER_LIST list
+of folders. If that is not defined settings.MEDIA_ROOT
+is used instead. </p>
+
+<p>Usage: clean_obsolete_uploads [dryrun] [backup]</p>
+
+<p>"dryrun" only list obsolete files without deleting them, 
+"backup" create a zip file with all the obsolete files.</p>
+
+<p>The best way to use clean_obsolete_uploads is to set up a 
+cron job to execute it regularly. The admin interface
+show all the cleanups.</p>
+
+<p>Note: this software is distribute with no warranty at all.
+Use it at your own risk.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
